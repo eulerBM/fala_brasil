@@ -4,7 +4,7 @@
 
 <h2>Clone esse repositório.</h2><br>
 
-<h3> HTTPS: [https://github.com/eulerBM/Space_Veneza.git](https://github.com/eulerBM/fala_brasil.git)</h3><br>
+<h3> HTTPS: https://github.com/eulerBM/fala_brasil.git</h3><br>
 <h2>Ou</h2><br>
 <h3> SSH: git@github.com:eulerBM/fala_brasil.git</h3><br><br><br>
 <h2>Ou</h2><br>
