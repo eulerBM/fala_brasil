@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     #My apps
     'app_main',
     'authen',
+    'game',
 ]
 
 MIDDLEWARE = [

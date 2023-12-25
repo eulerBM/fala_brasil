@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block context %}
+{% load static %}
+<link href="{% static 'css/playing.css' %}" rel="stylesheet">
+
+<div class="container">
+
+    {% for task in tasks %}
+        {{ task.name }}
+
+        <img src="{{ task.image }}" alt="" srcset="">
+        
+    {% endfor %}
+
+
+    
+    
+
+</div>
+
+
+
+
+
+
+{% endblock context %}

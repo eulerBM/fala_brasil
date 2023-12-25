@@ -13,7 +13,6 @@ def login_auth(request):
             login(request, user)
             return redirect('home')
     
-    
     return render(request, 'auth/login.html')
 
 
