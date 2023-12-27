@@ -8,8 +8,26 @@
     {% for task in tasks %}
         {{ task.name }}
 
-        <img src="{{ task.image }}" alt="" srcset="">
-        
+        <div class="container">
+
+            <div id="image">
+                <img src="{{ task.image }}" class="d-block w-50" alt="...">
+            </div>
+            
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon3">In english ?</span>
+                      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                      <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            
+
+        </div>
+
     {% endfor %}
 
 
