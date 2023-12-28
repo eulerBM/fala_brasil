@@ -6,32 +6,48 @@
 <div class="container">
 
     {% for task in tasks %}
-        {{ task.name }}
-
+        {{task.name}}
         <div class="container">
 
             <div id="image">
                 <img src="{{ task.image }}" class="d-block w-50" alt="...">
             </div>
             
-            <form method="post">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <div class="input-group">
+            <div class="mb-3">
+                <div class="input-group">
                       <span class="input-group-text" id="basic-addon3">In english ?</span>
                       <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                      <button type="submit" class="btn btn-success">Enviar</button>
-                    </div>
+                      <button type="submit" class="btn btn-success" onclick="pegarTexto('{{task.name}}')" >Enviar</button>
                 </div>
-            </form>
+            </div>
             
+        </div>
+
+        <div id="sucess">
+
+        </div>
+
+        <div id="danger">
 
         </div>
 
     {% endfor %}
 
 
+
+
     
+
+
+
+
+
+
+
+
+
+
+    <script src="{% static 'js/playing.js' %}"></script>
     
 
 </div>
