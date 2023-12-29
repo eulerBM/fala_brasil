@@ -1,4 +1,5 @@
 function pegarTexto(text_task) {
+
     var inputElement = document.getElementById('basic-url');
 
     var text_user = inputElement.value;
@@ -19,8 +20,6 @@ function pegarTexto(text_task) {
 
         document.getElementById('danger').innerHTML = novoConteudo;    
 
-
     }
-
     
 }
