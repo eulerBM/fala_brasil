@@ -3,25 +3,15 @@
 {% load static %}
 <link href="{% static 'css/playing.css' %}" rel="stylesheet">
 
-<div class="container">
+<div id="pergunta-container" class="container">
 
-    {% for task in tasks %}
-        {{task.name}}
-        <div class="container">
+        
+        
 
-            <div id="image">
-                <img src="{{ task.image }}" class="d-block w-50" alt="...">
-            </div>
-            
-            <div class="mb-3">
-                <div class="input-group">
-                      <span class="input-group-text" id="basic-addon3">In english ?</span>
-                      <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                      <button type="submit" class="btn btn-success" onclick="pegarTexto('{{task.name}}')" >Enviar</button>
-                </div>
-            </div>
-            
-        </div>
+
+
+
+
 
         <div id="sucess">
 
@@ -30,27 +20,11 @@
         <div id="danger">
 
         </div>
-
-    {% endfor %}
-
-
-
-
     
-
-
-
-
-
-
-
-
-
-
-    <script src="{% static 'js/playing.js' %}"></script>
-    
-
 </div>
+
+<div id="perguntas-json" style="display:none;">{{ task|safe }}</div>
+<script src="{% static 'js/playing.js' %}"></script>
 
 
 
