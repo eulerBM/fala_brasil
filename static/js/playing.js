@@ -1,5 +1,9 @@
+let indicePerguntaAtual = 0;
+let perguntas = [];
+
 document.addEventListener("DOMContentLoaded", function() {
     let perguntas = JSON.parse(document.getElementById('perguntas-json').textContent);
+    
 
     function exibirPergunta(indice) {
         let perguntaAtual = perguntas[indice];
@@ -32,17 +36,20 @@ document.addEventListener("DOMContentLoaded", function() {
         
     }
 
-    function proximaPergunta(proximaIndice) {
-        if (proximaIndice < perguntas.length) {
-            exibirPergunta(proximaIndice);
-        } else {
-            alert("Você respondeu todas as perguntas!");
-        }
-    }
-
     // Iniciando com a primeira pergunta
-    exibirPergunta(0);
+    exibirPergunta(indicePerguntaAtual);
+
 });
+
+function proximaPergunta() {
+    indicePerguntaAtual++;  // Avance para a próxima pergunta
+    if (indicePerguntaAtual < perguntas.length) {
+        exibirPergunta(indicePerguntaAtual);
+    } else {
+        alert("Você respondeu todas as perguntas!");
+        
+    }
+}
 
 
 
@@ -63,4 +70,5 @@ function pegarTexto(text_task) {
     }
 
     targetElement.innerHTML = novoConteudo;
+    proximaPergunta();
 }
