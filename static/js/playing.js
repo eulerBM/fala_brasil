@@ -15,13 +15,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="input-group">
                       <span class="input-group-text" id="basic-addon3">In english ?</span>
                       <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                      <button type="submit" class="btn btn-success" onclick="pegarTexto(${perguntaAtual.fields.name})" >Enviar</button>
+                      <button type="submit" class="btn btn-success" onclick="pegarTexto('${perguntaAtual.fields.name}')" >Enviar</button>
                 </div>
             </div>
-            
+
+            <div id="sucess">
+
+            </div>
+
+            <div id="danger">
+
+            </div>
+                
         </div>
         `;
-
         
     }
 
@@ -40,27 +47,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function pegarTexto(text_task) {
-
     var inputElement = document.getElementById('basic-url');
-
     var text_user = inputElement.value;
 
+    var conteudoAtual, novoConteudo, targetElement;
+
     if (text_task === text_user) {
-
-        var conteudoAtual = document.getElementById('sucess').innerHTML;
-
-        var novoConteudo = conteudoAtual + '<div class="alert alert-success" role="alert">A palavra ' + text_user + ' esta correta!</div>';
-
-        document.getElementById('sucess').innerHTML = novoConteudo;      
-
-    }else{
-
-        var conteudoAtual = document.getElementById('danger').innerHTML;
-
-        var novoConteudo = conteudoAtual + '<div class="alert alert-danger" role="alert">A palavra ' + text_user + ' esta errada!</div>';
-
-        document.getElementById('danger').innerHTML = novoConteudo;    
-
+        targetElement = document.getElementById('sucess');
+        conteudoAtual = targetElement.innerHTML;
+        novoConteudo = conteudoAtual + '<div class="alert alert-success" role="alert">A palavra ' + text_user + ' está correta!</div>';
+    } else {
+        targetElement = document.getElementById('danger');
+        conteudoAtual = targetElement.innerHTML;
+        novoConteudo = conteudoAtual + '<div class="alert alert-danger" role="alert">A palavra ' + text_user + ' está errada!</div>';
     }
-    
+
+    targetElement.innerHTML = novoConteudo;
 }
