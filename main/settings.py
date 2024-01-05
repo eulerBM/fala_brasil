@@ -10,6 +10,8 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv() )
 
+AUTH_USER_MODEL = 'app_main.CustomUser'
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',

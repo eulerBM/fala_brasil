@@ -9,10 +9,12 @@
 <div class="container">
 
     <img src="" alt="">
-    
+
     <h1>{{ request.user }}</h1>
 
-    <h2>Nivel : </h2>
+    <h3>Nivel : {{ request.user.level }}</h3>
+    
+    <h3>Pontos : {{ request.user.points }}</h3>
     
     <a href="{% url 'playing' %}" id='botao' type="button" class="btn btn-success">Jogar</a>
        
