@@ -8,7 +8,7 @@ def home_page(request):
 @login_required
 def friend_page(request):
     
-
+    print("Passou por aqui")
     return render (request, 'friend/friend.html')
     
     
