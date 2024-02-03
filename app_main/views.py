@@ -12,10 +12,9 @@ def friend_page(request):
     
     search_query = request.GET.get('search_query')
 
-    useres_get = CustomUser.objects.filter(first_name=search_query)
+    useres_get = CustomUser.objects.filter(first_name__icontains=search_query)
 
     context = {
-
         'users': useres_get,
             
     }

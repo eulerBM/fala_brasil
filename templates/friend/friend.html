@@ -18,20 +18,23 @@
         </thead>
         <tbody class="table-group-divider">
 
-          <tr>
-            <th scope="row">1</th>
-
-            <td>Euler</td>
-            <td>Adicionar</td>
+          {% for user in users %}
 
           <tr>
-            <th scope="row">2</th>
+            
+            <th scope="row">{{ user.id}}</th>
+            <td>{{ user.first_name }}</td>
+            <td><button class="btn btn-success" type="submit">Adicionar</button>
+            <button class="btn btn-warning" type="submit">Visualizar</button></td>
+            
 
-            <td>Enzelo</td>
-            <td colspan="2">Larry the Bird</td>
+          <tr>
+
+          {% endfor %}
+
+          
             
           </tr>
-
         </tbody>
       </table>
 
