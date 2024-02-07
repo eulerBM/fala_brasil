@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'app_main',
     'authen',
     'game',
-    'friend'm
+    'friend',
 ]
 
 MIDDLEWARE = [
