@@ -6,5 +6,4 @@ urlpatterns = [
     path('playing', friend_page, name="search_player"),
     path('add_friend', add_friend, name="add_player"),
     path('visualizer_friend', visualizer_friend, name="visualizer_player"),
-    
 ]

@@ -16,7 +16,6 @@ def friend_page(request):
 
     return render (request, 'friend/friend.html', context)
 
-
 @login_required
 def add_friend(request):
     pass
