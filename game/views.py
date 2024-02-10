@@ -9,7 +9,6 @@ def playing(request):
     task_user = tasks.objects.all()[:10]
 
     context = {
-        'task': serialize('json', task_user),
-            
+        'task': serialize('json', task_user),    
     }
     return render (request, 'game/playing.html', context)
