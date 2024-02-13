@@ -10,8 +10,7 @@ def friend_page(request):
     useres_get = CustomUser.objects.filter(first_name__icontains=search_query)
 
     context = {
-        'users': useres_get,
-            
+        'users': useres_get,   
     }
 
     return render (request, 'friend/friend.html', context)
