@@ -19,7 +19,6 @@ def friend_page(request):
 def add_friend(request):
     pass
 
-
 @login_required
 def visualizer_friend(request):
     pass
