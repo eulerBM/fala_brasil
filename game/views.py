@@ -5,7 +5,6 @@ from django.shortcuts import render
 
 @login_required
 def playing(request):
-    
     task_user = tasks.objects.all()[:10]
 
     context = {
