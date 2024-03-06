@@ -26,13 +26,13 @@
               <li class="nav-item">
                 <a href="{% url "logout_auth" %}" class="nav-link active" aria-current="page">Sair</a>
               </li>
-              
             </ul>
             
             <form action="{% url 'search_player' %}" class="d-flex" role="search" method="GET">
               <input class="form-control me-2" type="search" placeholder="Procurar player" aria-label="Search" name="search_query">
               <button class="btn btn-outline-success" type="submit">Procurar</button>
             </form>
+            
           </div>
         </div>
     </nav>
